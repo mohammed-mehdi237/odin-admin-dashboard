@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
 :root{
 --blue : #1992D4;
@@ -9,10 +13,74 @@
 --text-color:#909090;
 }
 
+ul{
+  list-style: none;
+}
+
 
 body{
   display: grid;
   grid-template-columns: 1fr 4fr;
+  grid-template-rows: 300px 1fr;
   font-family: 'Roboto' ,sans-serif;
+  min-height: 100vh;
 }
 
+
+/* START OF SIDEBAR STYLES */
+
+.sidebar{
+  grid-column: 1/2;
+  grid-row: 1/-1;
+  
+  background-color: var(--blue);
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 3rem;
+
+  padding: 1rem;
+  color: white;
+}
+
+.sidebar .logo{
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sidebar ul{
+  padding-left: 1.5rem ;
+}
+
+.sidebar ul li{
+  margin-bottom: 0.75rem;
+
+  display: flex;
+  gap: 1.5rem ;
+
+}
+
+/* END OF SIDEBAR STYLES */
+/* START OF HEADER STYLES */
+
+.header{
+  grid-column: 2/-1;
+  background-color: white;
+}
+
+
+
+/* END OF HEADER STYLES */
+/* START OF MAIN STYLES */
+
+
+.main{
+  grid-column: 2/-1;
+  background-color: var(--grey);
+}
+
+/* END OF MAIN STYLES */
