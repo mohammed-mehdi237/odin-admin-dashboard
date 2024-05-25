@@ -77,6 +77,8 @@ body{
 
   padding: 1rem 2rem;
   padding-right: 3rem;
+  box-shadow: 1px 3px 5px  0px rgb(200, 200, 200);
+  z-index: 10;
 }
 
 .search{
@@ -139,6 +141,97 @@ body{
 .main{
   grid-column: 2/-1;
   background-color: var(--grey);
+  
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+  
+  padding: 2rem 1rem;
+}
+
+.main p{
+  color: var(--text-color);
+}
+
+.main>div{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.main-posts{
+  gap: 0.5rem;
+}
+
+.posts{
+  display: grid;
+  grid-template-columns: repeat(2 , minmax(150px,1fr));
+  gap: 1.5rem;
+}
+
+.post{
+  padding: 2rem 1rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-left: 0.5rem solid var(--orange);
+  border-radius: 0.5rem;
+  box-shadow: 1px 3px 5px  0px rgb(200, 200, 200);
+}
+
+.post p{
+  margin-top: -2rem;
+}
+
+.choices{
+  align-self: end;
+  justify-self: end;
+  margin-bottom: -1rem;
+  margin-right: 1rem;
+
+  display: flex;
+  gap: 1.5rem;
+}
+
+.main-sidebar{
+  gap: 2rem;
+}
+
+.announcements, .trending{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.announcements-main,.trending-main{
+  padding: 2rem ;
+  background-color: white;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.announcement-post{
+  border-bottom: 1px solid gray;
+  padding-bottom: 1rem;
+}
+
+.announcement-post:last-child{
+  border: none;
+  padding-bottom: 0;
+}
+
+.trending-main{
+  padding-top: 1.5rem;
+  gap: 1.5rem;
+}
+
+.trending-profile{
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 /* END OF MAIN STYLES */
